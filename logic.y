@@ -20,15 +20,16 @@ int temp_index=0;
  char *constant;
  struct symtab *symp;
 }
-%token <operator> AND OR NOT ASSIGN IMPLICATION
+%token <operator> AND OR NOT ASSIGN IMPLICATION EQUIVALENT
 %token <punctuation> LEFT_P RIGHT_P
 %token <constant> TRUE FALSE
 %token <symp> ID
+%left EQUIVALENT
 %left IMPLICATION
 %left AND
 %left OR
 %right NOT
-%type <expr> E T F I
+%type <expr> EXPRESSION T F Y G 
 %%
 /*
 Especificación de YACC
@@ -50,35 +51,40 @@ SENTENCIALOGICA: SENTENCIA '\n' {
  temp_index=0;
 }
 ;
-SENTENCIA: ID ASSIGN E {
+SENTENCIA: ID ASSIGN EXPRESSION {
  imc_code_generator($1->name,$3,"","");
  $1->value=$3;
 }
-| E
+| EXPRESSION
 ;
-E: E OR T {
+EXPRESSION: EXPRESSION OR T {
  $$=new_temp();
  imc_code_generator($$,$1," V ",$3);
 }
 | T
 ;
-T: T AND I {
+T: T AND Y {
  $$=new_temp();
  imc_code_generator($$,$1," ^ ",$3);
 }
-| I
+| Y
 ;
-I: I IMPLICATION F{
+Y: Y IMPLICATION F{
      $$=new_temp();
  imc_code_generator($$,$1," -> ",$3);
     }
     |
     F
 ;
-F: LEFT_P E RIGHT_P {
+F: F EQUIVALENT G{
+    $$=new_temp();
+ imc_code_generator($$,$1," <-> ",$3);
+}| G
+
+G: LEFT_P EXPRESSION RIGHT_P {
  strcpy($$,$2);
 }
-| NOT LEFT_P E RIGHT_P {
+| NOT LEFT_P EXPRESSION RIGHT_P {
  strcpy($$," ~");
  strcat($$,$3);
 }

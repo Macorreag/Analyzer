@@ -1,0 +1,8 @@
+#adasda
+a = c AND b
+a -> b 
+a AND b
+a AND b OR (a OR b)
+a -> b -> (x AND b)
+a = FALSE
+y <-> u

@@ -12,6 +12,17 @@ para un lenguaje de lógica proposicional con proposiciones y oraciones de tipo 
 
 El analizador usa la especificación BNF para las reglas de derivación debido a que esta construido mediante YACC y este usa tal especificación para definir la GIC
 
+# Lenguaje Reconocido
+<aside class="warning">
+El documento del lenguaje reconocido debe terminar con un '\n' ó Enter para que la entrada sea reconocida completamente
+</aside>
+
+
+# Diagramas de Sintaxis
+
+Los diagramas de funcionamiento de Analizer están creados mediante la especificación BNF mediante la herramienta [Railroad Diagram Generator](https://www.bottlecaps.de/rr/ui)  y por lo tanto se añade un archivo de extención _.ebnf_ con el cual generar tales diagramas.
+
+
 
 # yyval
 
@@ -97,7 +108,7 @@ A continuación se especifican las expresiones regulares que determinan el patr�
 
 Para compilar los archivos Lex del  Analizador Lexico _main.l_  en las estaciones de trabajo Linux Lex ejecute las siguientes instrucciones desde la línea de comandos :
 
-> `make`
+> `sh run.sh`
 
 Internamente ejecutan las siguientes instrucciones:
 
@@ -109,7 +120,7 @@ Este comando usa las expresiones regulares y el código c en el archivo lex (mai
 
 Este comando compila el archivo **C** en un ejecutable con el nombre de _executable_.
 
-> `./executable < test/code1 > out/code1.out`
+> `./outputFile < test/code > results/code.out`
 
 
 

@@ -11,6 +11,7 @@ struct symtab *symbol_lookup(char*);
 letter [a-zA-Z]
 digit [0-9]
 id {letter}({letter}|{digit})*
+COMMENT 	["#"][ \t\na-zA-Z0-9]*[\n]
 %%
 "AND" {
  yylval.operator=strdup(yytext);
@@ -62,8 +63,15 @@ id {letter}({letter}|{digit})*
  tokenize(" -> ");
  return IMPLICATION;
 }
+"<->" {
+ yylval.operator=strdup(yytext);
+ tokenize(" <-> ");
+ return EQUIVALENT;
+}
 
-"$" exit(0);
+{COMMENT}		/*Linea de comentario*/
+
+<<EOF>> exit(0);
 [ \t] ;
 \n|. return yytext[0];
 %%
