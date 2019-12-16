@@ -1,3 +1,4 @@
+/*YACC Diagrams Sintaxis */
 LOGICSENTENCE
          ::= ( SENTENCE '\n' )+
 
@@ -13,9 +14,18 @@ Y ::= Y IMPLICATION F | F
 F ::= LEFT_P EXPRESSION RIGHT_P | NOT LEFT_P EXPRESSION RIGHT_P | ID | TRUE | FALSE
 
 
+/*LEX Diagramas para las categorías léxicas*/
 
-
-
+LETTER	::=	[a-zA-Z]*
+DIGIT	::=	[0-9]
+ID	::=	LETTER (LETTER | DIGIT )*
+AND	::=	"and" | "^"  | "&&" | 'AND'
+OR      ::=	'or' | 'OR' | 'v' | 'V'
+NOT     ::=	'not' | 'NOT' | '¬' | '~'
+TRUE    ::=	'true' | 'TRUE' | 'T'
+FALSE   ::=	'false' | 'FALSE' | 'F'
+/*El punto para Lex significa cualquier simbolo*/
+COMMENT ::=	'#' .* '\n'   
 
 
 

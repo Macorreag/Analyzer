@@ -11,13 +11,13 @@
       <style type="text/css">
     ::-moz-selection
     {
-      color: #FFFCF0;
-      background: #0F0C00;
+      color: #F0F0FF;
+      background: #00000F;
     }
     ::selection
     {
-      color: #FFFCF0;
-      background: #0F0C00;
+      color: #F0F0FF;
+      background: #00000F;
     }      
     .ebnf a, .grammar a
     {
@@ -25,50 +25,50 @@
     }
     .ebnf a:hover, .grammar a:hover
     {
-      color: #050400;
+      color: #000005;
       text-decoration: underline;
     }    
     .signature
     {
-      color: #806600;
+      color: #000080;
       font-size: 11px;
       text-align: right;
     }
     body
     {
       font: normal 12px Verdana, sans-serif;
-      color: #0F0C00;
-      background: #FFFCF0;
+      color: #00000F;
+      background: #F0F0FF;
     }
     a:link, a:visited
     {
-      color: #0F0C00;
+      color: #00000F;
     }
     a:link.signature, a:visited.signature
     {
-      color: #806600;
+      color: #000080;
     }
     a.button, #tabs li a
     {
       padding: 0.25em 0.5em;
-      border: 1px solid #806600;
-      background: #F1E8C6;
-      color: #806600;
+      border: 1px solid #000080;
+      background: #C6C6F1;
+      color: #000080;
       text-decoration: none;
       font-weight: bold;
     }
     a.button:hover, #tabs li a:hover
     {
-      color: #050400;
-      background: #FFF6D1;
-      border-color: #050400;       
+      color: #000005;
+      background: #D1D1FF;
+      border-color: #000005;       
     }     
     #tabs
     {
       padding: 3px 10px;
       margin-left: 0;
       margin-top: 58px;
-      border-bottom: 1px solid #0F0C00;
+      border-bottom: 1px solid #00000F;
     }  
     #tabs li
     {
@@ -78,14 +78,14 @@
     }
     #tabs li a
     {     
-      border-bottom: 1px solid #0F0C00;
+      border-bottom: 1px solid #00000F;
     }
     #tabs li a.active
     {
-      color: #0F0C00;
-      background: #FFFCF0;
-      border-color: #0F0C00;
-      border-bottom: 1px solid #FFFCF0;
+      color: #00000F;
+      background: #F0F0FF;
+      border-color: #00000F;
+      border-bottom: 1px solid #F0F0FF;
       outline: none;
     }
     #divs div
@@ -99,9 +99,9 @@
     }
     #text
     {
-      border-color: #806600;
-      background: #FFFEFA;
-      color: #050400;
+      border-color: #000080;
+      background: #FAFAFF;
+      color: #000005;
     }
     .small
     {
@@ -126,18 +126,18 @@
     div.download
     {
       display: none;
-      background: #FFFCF0;
+      background: #F0F0FF;
       position: absolute;
       right: 34px;
       top: 94px;
       padding: 10px;
-      border: 1px dotted #0F0C00;
+      border: 1px dotted #00000F;
     }
     #divs div.ebnf, .ebnf code
     {
       display: block;
       padding: 10px;
-      background: #FFF6D1;
+      background: #D1D1FF;
       width: 992px;
     }
     #divs div.grammar
@@ -146,7 +146,7 @@
       padding-left: 16px;
       padding-top: 2px;
       padding-bottom: 2px;
-      background: #FFF6D1;
+      background: #D1D1FF;
     }
     pre
     {
@@ -171,14 +171,14 @@
     }
     table.palette
     {
-      border-top: 1px solid #050400;
-      border-right: 1px solid #050400;
+      border-top: 1px solid #000005;
+      border-right: 1px solid #000005;
       margin-bottom: 4px
     }
     td.palette
     {
-      border-bottom: 1px solid #050400;
-      border-left: 1px solid #050400;
+      border-bottom: 1px solid #000005;
+      border-left: 1px solid #000005;
     }
     a.palette
     {
@@ -271,7 +271,146 @@
             
             <li><a href="#Y" title="Y">Y</a></li>
             </ul>
-         </p><br><hr>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="LETTER">LETTER:</a></p><img border="0" src="diagram/LETTER.png" height="101" width="161"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#LETTER" title="LETTER">LETTER</a>&nbsp;&nbsp;&nbsp;::= [a-zA-Z]*</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ID" title="ID">ID</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="DIGIT">DIGIT:</a></p><img border="0" src="diagram/DIGIT.png" height="37" width="121"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#DIGIT" title="DIGIT">DIGIT</a>&nbsp;&nbsp;&nbsp;&nbsp;::= [0-9]</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ID" title="ID">ID</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="ID">ID:</a></p><img border="0" src="diagram/ID.png" height="115" width="247" usemap="#ID.map"><map name="ID.map"><area shape="rect" coords="29,79,93,111" href="#LETTER" title="LETTER"><area shape="rect" coords="133,45,197,77" href="#LETTER" title="LETTER"><area shape="rect" coords="133,1,189,33" href="#DIGIT" title="DIGIT"></map><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#ID" title="ID">ID</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= <a href="#LETTER" title="LETTER">LETTER</a> ( <a href="#LETTER" title="LETTER">LETTER</a> | <a href="#DIGIT" title="DIGIT">DIGIT</a> )*</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#F" title="F">F</a></li>
+            
+            <li><a href="#SENTENCE" title="SENTENCE">SENTENCE</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="AND">AND:</a></p><img border="0" src="diagram/AND.png" height="169" width="147"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#AND" title="AND">AND</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= 'and'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| '^'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| '&amp;&amp;'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'AND'</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="OR">OR:</a></p><img border="0" src="diagram/OR.png" height="169" width="139"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#OR" title="OR">OR</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= 'or'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'OR'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'v'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'V'</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="NOT">NOT:</a></p><img border="0" src="diagram/NOT.png" height="169" width="147"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#NOT" title="NOT">NOT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= 'not'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'NOT'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| '¬'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| '~'</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#F" title="F">F</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="TRUE">TRUE:</a></p><img border="0" src="diagram/TRUE.png" height="125" width="155"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#TRUE" title="TRUE">TRUE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= 'true'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'TRUE'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'T'</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#F" title="F">F</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="FALSE">FALSE:</a></p><img border="0" src="diagram/FALSE.png" height="125" width="161"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#FALSE" title="FALSE">FALSE</a>&nbsp;&nbsp;&nbsp;&nbsp;::= 'false'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'FALSE'</div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 'F'</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#F" title="F">F</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="COMMENT">COMMENT:</a></p><img border="0" src="diagram/COMMENT.png" height="71" width="239"><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#COMMENT" title="COMMENT">COMMENT</a>&nbsp;&nbsp;::= '#' <a href="#." title=".">.</a>* '\n'</div></code></div>
+         </p>
+      
+      <p>no references</p><br><hr>
       
       <p>
          
@@ -286,7 +425,7 @@
                   <nobr class="signature">... generated by <a name="Railroad-Diagram-Generator" class="signature" title="https://www.bottlecaps.de/rr/ui" href="https://www.bottlecaps.de/rr/ui" target="_blank">Railroad Diagram Generator</a></nobr>
                   </td>
                
-               <td><a name="Railroad-Diagram-Generator" title="https://www.bottlecaps.de/rr/ui" href="https://www.bottlecaps.de/rr/ui" target="_blank"><img border="0" src="diagram/rr-1.60.png" height="16" width="16"></a></td>
+               <td><a name="Railroad-Diagram-Generator" title="https://www.bottlecaps.de/rr/ui" href="https://www.bottlecaps.de/rr/ui" target="_blank"><img border="0" src="diagram/Railroad-Diagram-Generator.png" height="16" width="16"></a></td>
                </tr>
             </table>
          </p>

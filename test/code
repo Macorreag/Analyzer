@@ -1,6 +1,7 @@
-#Test
-a = c AND b
-a -> b 
+# Test Sintaxis en orden 
+Home = p OR q and x -> Home2 or r AND S
+a = c AND  bVv
+a -> ¬(b) 
 a and b
 a ^ b OR (a OR b)
 a -> b -> (x && b)
@@ -9,4 +10,4 @@ a = FALSE
 a OR (x AND (b -> (c -> d)))
 a -> c
 a AND b
-a = TRUE
+a = true

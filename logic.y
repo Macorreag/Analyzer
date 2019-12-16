@@ -85,7 +85,7 @@ G: LEFT_P EXPRESSION RIGHT_P {
  strcpy($$,$2);
 }
 | NOT LEFT_P EXPRESSION RIGHT_P {
- strcpy($$," ~");
+ strcpy($$," ¬");
  strcat($$,$3);
 }
 | ID {
