@@ -1,0 +1,294 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      
+      <meta name="generator" content="Railroad Diagram Generator 1.60">
+      
+      <style type="text/css">
+    ::-moz-selection
+    {
+      color: #FFFCF0;
+      background: #0F0C00;
+    }
+    ::selection
+    {
+      color: #FFFCF0;
+      background: #0F0C00;
+    }      
+    .ebnf a, .grammar a
+    {
+      text-decoration: none;
+    }
+    .ebnf a:hover, .grammar a:hover
+    {
+      color: #050400;
+      text-decoration: underline;
+    }    
+    .signature
+    {
+      color: #806600;
+      font-size: 11px;
+      text-align: right;
+    }
+    body
+    {
+      font: normal 12px Verdana, sans-serif;
+      color: #0F0C00;
+      background: #FFFCF0;
+    }
+    a:link, a:visited
+    {
+      color: #0F0C00;
+    }
+    a:link.signature, a:visited.signature
+    {
+      color: #806600;
+    }
+    a.button, #tabs li a
+    {
+      padding: 0.25em 0.5em;
+      border: 1px solid #806600;
+      background: #F1E8C6;
+      color: #806600;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.button:hover, #tabs li a:hover
+    {
+      color: #050400;
+      background: #FFF6D1;
+      border-color: #050400;       
+    }     
+    #tabs
+    {
+      padding: 3px 10px;
+      margin-left: 0;
+      margin-top: 58px;
+      border-bottom: 1px solid #0F0C00;
+    }  
+    #tabs li
+    {
+      list-style: none;
+      margin-left: 5px;
+      display: inline;
+    }
+    #tabs li a
+    {     
+      border-bottom: 1px solid #0F0C00;
+    }
+    #tabs li a.active
+    {
+      color: #0F0C00;
+      background: #FFFCF0;
+      border-color: #0F0C00;
+      border-bottom: 1px solid #FFFCF0;
+      outline: none;
+    }
+    #divs div
+    {
+      display: none;
+      overflow:auto;
+    }
+    #divs div.active
+    {
+      display: block;
+    }
+    #text
+    {
+      border-color: #806600;
+      background: #FFFEFA;
+      color: #050400;
+    }
+    .small
+    {
+      vertical-align: top;
+      text-align: right;
+      font-size: 9px;
+      font-weight: normal;
+      line-height: 120%;
+    }
+    td.small
+    {
+      padding-top: 0px;
+    }
+    .hidden
+    {
+      visibility: hidden;
+    }
+    td:hover .hidden 
+    {
+      visibility: visible;
+    }
+    div.download
+    {
+      display: none;
+      background: #FFFCF0;
+      position: absolute;
+      right: 34px;
+      top: 94px;
+      padding: 10px;
+      border: 1px dotted #0F0C00;
+    }
+    #divs div.ebnf, .ebnf code
+    {
+      display: block;
+      padding: 10px;
+      background: #FFF6D1;
+      width: 992px;
+    }
+    #divs div.grammar
+    {
+      display: block;
+      padding-left: 16px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      background: #FFF6D1;
+    }
+    pre
+    {
+      margin: 0px;
+    }
+    .ebnf div
+    {
+      padding-left: 13ch;
+      text-indent: -13ch;
+    }
+    .ebnf code, .grammar code, textarea, pre
+    {
+      font:12px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    }
+    tr.option-line td:first-child
+    {
+      text-align: right
+    }
+    tr.option-text td
+    {
+      padding-bottom: 10px
+    }
+    table.palette
+    {
+      border-top: 1px solid #050400;
+      border-right: 1px solid #050400;
+      margin-bottom: 4px
+    }
+    td.palette
+    {
+      border-bottom: 1px solid #050400;
+      border-left: 1px solid #050400;
+    }
+    a.palette
+    {
+      padding: 2px 3px 2px 10px;
+      text-decoration: none;
+    }
+    .palette
+    {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+   </head>
+   
+   <body>
+      
+      <p style="font-size: 14px; font-weight:bold"><a name="LOGICSENTENCE">LOGICSENTENCE:</a></p><img border="0" src="diagram/LOGICSENTENCE.png" height="53" width="241" usemap="#LOGICSENTENCE.map"><map name="LOGICSENTENCE.map"><area shape="rect" coords="49,17,135,49" href="#SENTENCE" title="SENTENCE"></map><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#LOGICSENTENCE" title="LOGICSENTENCE">LOGICSENTENCE</a></div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= ( <a href="#SENTENCE" title="SENTENCE">SENTENCE</a> '\n' )+</div></code></div>
+         </p>
+      
+      <p>no references</p><br><p style="font-size: 14px; font-weight:bold"><a name="SENTENCE">SENTENCE:</a></p><img border="0" src="diagram/SENTENCE.png" height="69" width="341" usemap="#SENTENCE.map"><map name="SENTENCE.map"><area shape="rect" coords="49,33,83,65" href="#ID" title="ID"><area shape="rect" coords="103,33,171,65" href="#ASSIGN" title="ASSIGN"><area shape="rect" coords="211,1,311,33" href="#EXPRESSION" title="EXPRESSION"></map><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#SENTENCE" title="SENTENCE">SENTENCE</a>&nbsp;::= ( <a href="#ID" title="ID">ID</a> <a href="#ASSIGN" title="ASSIGN">ASSIGN</a> )? <a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a></div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#LOGICSENTENCE" title="LOGICSENTENCE">LOGICSENTENCE</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="EXPRESSION">EXPRESSION:</a></p><img border="0" src="diagram/EXPRESSION.png" height="81" width="323" usemap="#EXPRESSION.map"><map name="EXPRESSION.map"><area shape="rect" coords="29,45,129,77" href="#EXPRESSION" title="EXPRESSION"><area shape="rect" coords="149,45,187,77" href="#OR" title="OR"><area shape="rect" coords="227,45,253,77" href="#Y" title="Y"><area shape="rect" coords="227,1,273,33" href="#AND" title="AND"></map><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a></div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= <a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a> <a href="#OR" title="OR">OR</a> <a href="#Y" title="Y">Y</a> ( <a href="#AND" title="AND">AND</a> <a href="#Y" title="Y">Y</a> )*</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a></li>
+            
+            <li><a href="#F" title="F">F</a></li>
+            
+            <li><a href="#SENTENCE" title="SENTENCE">SENTENCE</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="Y">Y:</a></p><img border="0" src="diagram/Y.png" height="81" width="201" usemap="#Y.map"><map name="Y.map"><area shape="rect" coords="49,45,75,77" href="#F" title="F"><area shape="rect" coords="49,1,151,33" href="#IMPLICATION" title="IMPLICATION"></map><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#Y" title="Y">Y</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= <a href="#F" title="F">F</a> ( <a href="#IMPLICATION" title="IMPLICATION">IMPLICATION</a> <a href="#F" title="F">F</a> )*</div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a></li>
+            </ul>
+         </p><br><p style="font-size: 14px; font-weight:bold"><a name="F">F:</a></p><img border="0" src="diagram/F.png" height="201" width="481" usemap="#F.map"><map name="F.map"><area shape="rect" coords="69,33,113,65" href="#NOT" title="NOT"><area shape="rect" coords="153,1,217,33" href="#LEFT_P" title="LEFT_P"><area shape="rect" coords="237,1,337,33" href="#EXPRESSION" title="EXPRESSION"><area shape="rect" coords="357,1,431,33" href="#RIGHT_P" title="RIGHT_P"><area shape="rect" coords="49,77,83,109" href="#ID" title="ID"><area shape="rect" coords="49,121,101,153" href="#TRUE" title="TRUE"><area shape="rect" coords="49,165,107,197" href="#FALSE" title="FALSE"></map><p>
+         
+         <div class="ebnf"><code>
+               
+               <div><a href="#F" title="F">F</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= <a href="#NOT" title="NOT">NOT</a>? <a href="#LEFT_P" title="LEFT_P">LEFT_P</a> <a href="#EXPRESSION" title="EXPRESSION">EXPRESSION</a> <a href="#RIGHT_P" title="RIGHT_P">RIGHT_P</a></div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a href="#ID" title="ID">ID</a></div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a href="#TRUE" title="TRUE">TRUE</a></div>
+               
+               <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a href="#FALSE" title="FALSE">FALSE</a></div></code></div>
+         </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Y" title="Y">Y</a></li>
+            </ul>
+         </p><br><hr>
+      
+      <p>
+         
+         <table border="0" class="signature">
+            
+            <tr>
+               
+               <td style="width: 100%">&nbsp;</td>
+               
+               <td valign="top">
+                  
+                  <nobr class="signature">... generated by <a name="Railroad-Diagram-Generator" class="signature" title="https://www.bottlecaps.de/rr/ui" href="https://www.bottlecaps.de/rr/ui" target="_blank">Railroad Diagram Generator</a></nobr>
+                  </td>
+               
+               <td><a name="Railroad-Diagram-Generator" title="https://www.bottlecaps.de/rr/ui" href="https://www.bottlecaps.de/rr/ui" target="_blank"><img border="0" src="diagram/rr-1.60.png" height="16" width="16"></a></td>
+               </tr>
+            </table>
+         </p>
+      </body>
+   </html>

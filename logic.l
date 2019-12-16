@@ -8,12 +8,15 @@ extern void yyerror(char*);
 void tokenize(char*);
 struct symtab *symbol_lookup(char*);
 %}
-letter [a-zA-Z]
-digit [0-9]
-id {letter}({letter}|{digit})*
-COMMENT 	["#"][ \t\na-zA-Z0-9]*[\n]
+letter		[a-zA-Z]
+digit			[0-9]
+id			{letter}({letter}|{digit})*
+AND			and|AND|^|&&
+/*El punto para Lex significa cualquier simbolo*/
+COMMENT 	[#].*[\n]   
+
 %%
-"AND" {
+{AND} {
  yylval.operator=strdup(yytext);
  tokenize(" AND ");
  return AND;
@@ -69,7 +72,7 @@ COMMENT 	["#"][ \t\na-zA-Z0-9]*[\n]
  return EQUIVALENT;
 }
 
-{COMMENT}		/*Linea de comentario*/
+{COMMENT}     ;/*Linea de comentario*/
 
 <<EOF>> exit(0);
 [ \t] ;

@@ -1,8 +1,12 @@
-#adasda
+#Test
 a = c AND b
 a -> b 
-a AND b
-a AND b OR (a OR b)
-a -> b -> (x AND b)
+a and b
+a ^ b OR (a OR b)
+a -> b -> (x && b)
 a = FALSE
-y <-> u
+#Test Token fpunctuation
+a OR (x AND (b -> (c -> d)))
+a -> c
+a AND b
+a = TRUE
