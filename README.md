@@ -59,18 +59,6 @@ El parser y el léxico deben usar el mismo conjunto de símbolos para identifica
 
 A continuación se especifican las expresiones regulares que determinan el patrón que caracteriza a cada una de esas categorías léxicas.
 
-|Categoría | Expresión Regular | Token Generado |
-| ---------- | ---------- | ---------- | 
-| Espacio  | ` [ \t\n]+`   | a |
-| Predicado Aritmetico   | ` [pqrt][0-9]{0,5} `|
-| Predicado Algebraico | ` [xyz][0-9]{0,5} `|
-| Operador | ` ["+"\|"-"\|"*"\|"/"] \|\| ["&&"\|"\|\|"->"] \|\| [":"\|":="\|"<>"\|"<"\|">"]  ` |
-| Delimitador |`  [ "("\|")"\|"["\|"\]"\|"{"\|"}"]  `|
-| Comentario |` ["#"][ \t\na-zA-Z0-9]*[\n] ` |
-| Fin de Sentencia | ` [;] `|
-| Desconocido |` . ` |
-
-
 
 **LETTER**: Define letras del Alfabeto
 
@@ -127,16 +115,40 @@ Produce la salida
 
 ===================
 ```    
-Como se puede ver los Token corresponden con la entrada que se proporciona.
+Como se puede ver los Token corresponden con la entrada que se proporciona.También se puede notar que respeta la [**precedencia de operadores**](https://es.wikipedia.org/wiki/L%C3%B3gica_proposicional#Lenguaje_formal_en_la_notaci%C3%B3n_BNF) de finida por el sistema formal.
 
-También se puede notar que respeta la [**precedencia de operadores**](https://es.wikipedia.org/wiki/L%C3%B3gica_proposicional#Lenguaje_formal_en_la_notaci%C3%B3n_BNF) de finida por el sistema formal.
+# Test2
 
-Por lo tanto:
-1. Negación
-2. Conjunción
-3. Disyunción
-4. Implicación
-5. Bicondicional
+> `a OR (x AND ( ( b -> c ) -> ( d AND a)))`
+
+Produce la salida 
+
+```
+Tokenized String: ID OR  ( ID AND  (  ( ID -> ID )  ->  ( ID AND ID )  )  ) 
+t1 = b  ->  c
+t2 = d  ^  a
+t3 = t1  ->  t2
+t4 = x  ^  t3
+t5 = a  V  t4
+
+===================
+```    
+Como se puede ver los Token corresponden  con la entrada que se proporciona.También se puede notar que respeta la [**precedencia de operadores**](https://es.wikipedia.org/wiki/L%C3%B3gica_proposicional#Lenguaje_formal_en_la_notaci%C3%B3n_BNF) de finida por el sistema formal puesto a la manera como prioriza los parentesis sobre otros operadores.
+
+
+# Test3
+
+> `a = ~(true)`
+
+Produce la salida 
+
+```
+Tokenized String: ID =  NOT  (  TRUE  ) 
+a =  ¬ T   
+
+===================
+```    
+Como se puede ver los Token corresponden  con la entrada que se proporciona y ademas reconoce la negación.
 
 # Funcionamiento de Analyzer en Ubuntu
 
@@ -157,7 +169,7 @@ Esto generara el executable outputFile el cual contiene un analizador sintáctic
 Este comado ejecutara analyzer, y revisara el código que se encuentra en _test/code_ y el resultado se redirecciona al archivo _code1.out_ que se encuentra en la carpeta _results_
 
 
-### Salida de analizer
+### Salida de Analyzer
  
 Asi se ve la salida de Analyzer para la siguiente linea de código  ` a ^ b OR (a OR b) `
 ```

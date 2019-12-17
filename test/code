@@ -6,8 +6,8 @@ a and b
 a ^ b OR (a OR b)
 a -> b -> (x && b)
 a = FALSE
-#Test Token fpunctuation
-a OR (x AND (b -> (c -> d)))
+#Test Token Punctuation
+a OR (x AND ( ( b -> c ) -> ( d AND a)))
 a -> c
 a AND b
-a = true
+a = ~(true)
